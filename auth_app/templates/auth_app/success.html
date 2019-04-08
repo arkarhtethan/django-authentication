@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	Logged IN successfully.
+
+	<form method="POST" action="{% url 'auth_app:logout_view' %}">
+		
+		{% csrf_token %}
+		
+		{{form}}
+
+		<input type="submit" name="" value="LOGOUT">
+		
+	</form>
+
+{% endblock %}
